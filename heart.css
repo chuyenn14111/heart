@@ -1,0 +1,96 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+/* canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+} */
+
+.pinkboard {
+  width: 2000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+#heart {
+  position: relative;
+  margin: auto;
+  width: 500px;
+  height: 500px;
+  animation: heartbeat ease-in 1.2s infinite;
+} 
+
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 100px;
+    height: 160px;
+    background: #FF5CA4;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+
+#heart:before {
+  left: 45px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 25),
+              0 10px 10px rgba(0, 0, 0, 22);
+
+}
+
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+            transform: rotate(30deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+@keyframes heartbeat
+{
+  0%
+  {
+    transform: scale(1);
+  }
+  30%
+  {
+    transform: scale(.8);
+  }
+  60%
+  {
+    transform: scale(1.2);
+  }
+  100%
+  {
+    transform: scale(1);
+  }
+}
