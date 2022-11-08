@@ -1,10 +1,10 @@
 var settings = {
   particles: {
-    length:   2000, //maximum amount of particles
-    duration: 2, //particle duration in sec
-    velocity: 200, //particle velocity in pixels/sec
-    effect:   -2, // play with this for a nice effect
-    size:     10, // particle size in pixels
+    length:   5000, //maximum amount of particles
+    duration: 1.5, //particle duration in sec
+    velocity: 150, //particle velocity in pixels/sec
+    effect:   -3, // play with this for a nice effect
+    size:     7, // particle size in pixels
   },
 };
 
@@ -302,7 +302,7 @@ var ParticlePool = (function() {
 
     // create the fill
 
-    context.fillStyle = '#ea80b0';
+    context.fillStyle = '#e21e76';
 
     context.fill();
 
